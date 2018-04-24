@@ -1,0 +1,59 @@
+body{
+	background: transparent;
+	width: 100%;
+	height: 100%;
+	margin:0;
+	padding: 0;
+}
+.main-body{
+	margin: 0;
+	padding: 0;
+	height: 651px;
+	width: 100%;
+}
+
+.container{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.login-container{
+	padding: 20px;
+	width: 300px;
+	height: 400px;
+	right: 7%;
+	top: 20%;
+	position: absolute;
+	background: #2e3644;
+	opacity: 0.5;
+}
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#London {background-color:red;}
+#Paris {background-color:green;}
+#Tokyo {background-color:blue;}
+#Oslo {background-color:orange;}
