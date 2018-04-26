@@ -4,11 +4,13 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<script type="text/javascript" src="js/login.js"></script>
+		<script type="text/javascript" src="js/sendmail.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<title>Project JacX</title>
 	</head>
 	
@@ -59,7 +61,7 @@
 					</form>
 				</div>
 				<div id="menu2" class="tab-pane fade">	  
-					<form method="post" action="SendMail.php" target="_blank">
+					<form method="POST" action="SendMail.php">
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 							<input id="namesurname" type="text" class="form-control" name="namesurname" placeholder="Name - Surname">
@@ -70,15 +72,15 @@
 						</div>
 						<div class="input-group">
 							<span class="input-group-addon"><i class="glyphicon glyphicon-share-alt"></i></span>
-							<input id="password" type="text" class="form-control" name="subject" placeholder="Subject">
+							<input id="subject" type="text" class="form-control" name="subject" placeholder="Subject">
 						</div>
 						<br>
 						<div class="input-group">
 							<span class="input-group-addon">Text</span>
-							<textarea class="form-control" rows="5" id="comment" name="mailtext"></textarea>
+							<textarea class="form-control" rows="5" id="mailtext" name="mailtext"></textarea>
 						</div>
 						<div class="input-group">
-							<input type="submit" id="send" class="btn btn-default" value="Send"></input>
+							<input type="submit" id="send" onclick="sendMail()"class="btn btn-default" value="Send"></input>
 						</div>
 					</form>
 				</div>
