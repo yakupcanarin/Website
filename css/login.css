@@ -55,3 +55,85 @@ body{
 	width: 120px !important;
 	height: 40px;
 }
+
+.footer-container {
+	bottom:0;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	margin: 0;
+	padding:0;
+	background-color: transparent;
+}
+
+.footer {
+	background-color: #30353d;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: 1s;
+	opacity: .5;	
+}
+
+.footer:hover{
+	transition: 1s;
+	opacity: 1;
+}
+
+.footer h1 {
+	font : normal 400 12px/1 'Josefin Sans', sans-serif;
+	left: 10px;
+	position: absolute;
+	color: white;
+	bottom: 1px !important;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  float: right;
+  height: 25%;
+  transition: .5s;
+  background-size: auto;
+  
+}
+
+	
+.fa-facebook,.fa-linkedin ,.fa-twitter, .fa-google,.fa-instagram, .fa-github {
+	position: relative;
+	color: white;
+}
+
+.fa:hover {
+	transition: .5s;
+	width: 65px;
+}
+
+.fa-facebook:hover {
+	color: #3b5998;
+	
+}
+.fa-linkedin:hover {
+	color: #0077B5;
+}
+
+.fa-twitter:hover {
+	color: #0084b4;
+}
+.fa-google:hover {
+	color: #DD4B39;
+}
+
+.fa-instagram:hover {
+	color: #cd486b;
+}
+
+.fa-github:hover {
+	color: #fff847;
+}
+

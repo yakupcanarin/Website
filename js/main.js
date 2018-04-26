@@ -129,7 +129,7 @@ $(function() {
 		mouse_loop();
 	} );
 } ) ( jQuery )
-
+function fogEffect(){
 console.clear();
 
 canvasWidth = 1600;
@@ -268,4 +268,5 @@ function randOffset(n, variance)
 function clog(s)
 {  
   console.log(s);
+}
 }
