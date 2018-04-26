@@ -5,42 +5,65 @@
 		<link rel="stylesheet" type="text/css" href="css/login.css"/>
 		<script type="text/javascript" src="js/login.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<title>Project JacX</title>
 	</head>
 	
-	<body>
+	<body onload="defaultopen()">
 		<div class = "main-body" style="background:url('img/img2.jpg') no-repeat center center">
-			<div class="container"> 
-				<div id="London" class="tabcontent" >
-					<h3>London</h3>
-					<p>London is the capital city of England.</p>
-				</div>
-				<div id="Paris" class="tabcontent">
-					<h3>Paris</h3>
-					<p>Paris is the capital of France.</p> 
-				</div>
-				<div id="Tokyo" class="tabcontent">
-					<h3>Tokyo</h3>
-					<p>Tokyo is the capital of Japan.</p>
-				</div>
-				<div id="Oslo" class="tabcontent">
-					<h3>Oslo</h3>
-					<p>Oslo is the capital of Norway.</p>
-				</div>
-				<button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
-				<button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-				<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-				<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
+	
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#home">Login</a></li>
+				<li><a data-toggle="tab" href="#menu1">Sign Up</a></li>
+				<li><a data-toggle="tab" href="#menu2">Contact</a></li>
+			</ul>
 
-				<div id="Login" class="tabcontent">
-					<!-- <form id ="loginsheet" action="Login.php" method="POST">	  -->
-						<!-- <input class="item-textbox" type="text" id="username" name="ID" value="Username" > -->
-						<!-- <input class="item-textbox" type="text" id="password" name="Password" value="Password"> -->
-						<!-- <input class="button-login" type="submit" value="Login">  -->
-					<!-- </form>  -->
-				</div>
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
 
+					<form method="post" action="Login.php" target="_blank">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input id="Email" type="text" class="form-control" name="email" placeholder="Email">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input id="Password" type="password" class="form-control" name="password" placeholder="Password">
+						</div>
+						<div class="input-group">
+							<input type="submit" id="login-button" class="btn btn-default" value="Login"></input>
+						</div>
+					</form>
+				</div>
+					
+				<div id="menu1" class="tab-pane fade">
+					<form method="post" action="SignUp.php" target="_blank">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-text-background"></i></span>
+							<input id="Name-Surname" type="text" class="form-control" name="namesurname" placeholder="Name - Surname">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input id="SignUpEmail" type="text" class="form-control" name="SignUpemail" placeholder="Email">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							<input id="SignUpPassword" type="password" class="form-control" name="SignUppassword" placeholder="Password">
+						</div>
+							<div class="input-group">
+							<input type="submit" id="sign-button" class="btn btn-default" value="Sign Up"></input>
+						</div>
+					</form>
+				</div>
+				<div id="menu2" class="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
 			</div>
 		</div>
+
 	</body>	
 </html>
